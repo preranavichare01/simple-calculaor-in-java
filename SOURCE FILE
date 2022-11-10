@@ -1,0 +1,151 @@
+/* CREATE DIFFRENT FILES AS PER BELOW MENTIONED AND ADD CODE IN RESPECTIVE FILES  */
+
+//main.java
+package calculator;
+import java.util.*;
+public class operation {
+public static void main(String[] args) {	
+System.out.println("\t\t************SIMPLE CALCULATOR*************");
+System.out.println("-----------------------------------------------------------------------");
+System.out.println("\t\t1.+\t\t2.-\t\t3.*\t\t 4./\n\t\t5.%\t\t6.x^2\t\t7.a^b\t\t 8.e\n\t\t9.sqrt");
+System.out.println("--------------------------------------------------------------------------");
+		float x, y;
+		int choice;
+		Scanner sc = new Scanner(System.in);
+System.out.println("press 10 if you want to exit");
+		do {System.out.println("Enter your choice:");
+			choice = sc.nextInt();
+			switch (choice) {
+			case 1:System.out.println("Enter two numbers:");
+				x = sc.nextFloat();
+				y = sc.nextFloat();
+                                   addition a1 = new addition();
+				a1.add(x, y);
+				break;
+case 2:System.out.println("Enter two numbers:");
+				x = sc.nextFloat();
+				y = sc.nextFloat();
+				subtraction s = new subtraction();
+				s.sub(x, y);
+				break;
+case 3:System.out.println("Enter two numbers:");
+				x = sc.nextFloat();
+				y = sc.nextFloat();
+				multiplication m = new multiplication();
+				m.mul(x, y);
+				break;
+case 4:System.out.println("Enter two numbers:");
+				x = sc.nextFloat();
+				y = sc.nextFloat();
+				division d = new division();
+				d.div(x, y);
+                                               break;
+case 5:System.out.println("Enter two numbers:");
+				x = sc.nextFloat();
+				y = sc.nextFloat();
+				mod m1 = new mod();
+				m1.modr(x, y);
+				break;
+case 6:System.out.println("Enter a number:");
+				x = sc.nextFloat();
+			square s1 = new square();
+				s1.squ(x);
+				break;
+case 7:System.out.println("Enter two numbers:");
+				x = sc.nextFloat();
+				y = sc.nextFloat();
+				power p = new power();
+				p.powe(x, y);
+				break;
+case 8:System.out.println("Enter a number:");
+				x = sc.nextFloat();
+				exponential e1 = new exponential();
+				e1.expo(x);
+				break;
+case 9:System.out.println("Enter a number:");
+				x = sc.nextFloat();
+				squareroot s2 = new squareroot();
+				s2.sqr(x);
+				break;
+case 10:break;
+default: System.out.println("Invalid choice");
+			}
+                             } while (choice != 10);
+	}
+    }
+}
+
+//addition.java
+package calculator;
+public class addition 
+{
+	public void add(float a, float b) {
+		float  r = a + b;
+		System. out. println("Addition:" + r);
+	}
+
+}
+//subtraction.java
+package calculator;
+public class subtraction {
+	public void sub(float a, float b) {
+		float r = a - b;
+		System.out.println("subtraction:" + r);
+	}
+}
+//multiplication.java
+package calculator;
+public class multiplication {
+
+	public void mul(float a, float b) {
+		float r = a * b;
+		System.out.println("multiplication:" + r);
+	}
+	}
+//division.java
+package calculator;
+public class division {
+	public void div(float a, float b) {
+		float r = a / b;
+		System.out.println("Division:" + r);
+	}
+}
+//square.java
+package calculator;
+public class square {
+	public void squ(float a) {
+		float r = a * a;
+		System.out.println("square:" + r);
+	}
+}
+//squareroot.java
+package calculator;
+public class squareroot {
+	public void sqr(float a) {
+
+		System.out.println("Square root:" + Math.sqrt(a));
+	}
+}
+//power.java
+package calculator;
+public class power {
+	public void powe(float a, float b) {
+
+		System.out.println("Power:" + Math.pow(a, b));
+	}
+}
+// exponential.java
+package calculator;
+public class exponential {
+	public void expo(float a) {
+
+		System.out.println("Exponential:" + Math.exp(a));
+	}
+}
+//mod.java
+package calculator;
+public class mod {
+	public void modr(float a, float b) {
+		float r = a % b;
+		System.out.println("Modification:" + r);
+	}}
